@@ -1,0 +1,9 @@
+{
+  "capture_date": "2026-07-14",
+  "locale": "en-US",
+  "region": "US",
+  "response_family": "tbm=map",
+  "original_body_sha256": "173b51cdfa4458d243ae3ab75d0255a89bb33ca3ea6719303a9a9dfc82cb579d",
+  "public_seed": "Space Needle Seattle WA",
+  "sanitization": "Reduced to the selected public landmark record and one synthetic unrelated-coordinate regression; removed tokens, photos, reviews, headers, and recommendations."
+}

@@ -1,0 +1,20 @@
+{
+  "endpoint": "directions",
+  "fields": [
+    {"field": "origin", "status": "supported", "notes": "Mapped to Maps directions URL origin parameter.", "official_api": "Directions API"},
+    {"field": "destination", "status": "supported", "notes": "Mapped to Maps directions URL destination parameter.", "official_api": "Directions API"},
+    {"field": "travel_mode", "status": "supported", "notes": "Supported values: driving, walking, bicycling, transit.", "official_api": "Directions API"},
+    {"field": "waypoints", "status": "partial", "notes": "Passed to Maps URL as pipe-separated list. Optimized ordering not supported.", "official_api": "Directions API"},
+    {"field": "avoid", "status": "partial", "notes": "Supported: ferries, highways, tolls. Other avoid values are ignored.", "official_api": "Directions API"},
+    {"field": "alternatives", "status": "partial", "notes": "When true, returns all alternatives visibly offered by Maps web; route availability and count are not guaranteed to match the official API.", "official_api": "Directions API"},
+    {"field": "optimize_waypoints", "status": "unsupported", "notes": "Maps web does not support waypoint optimization via URL.", "official_api": "Directions API"},
+    {"field": "units", "status": "unsupported", "notes": "Unit system not controllable via Maps URL.", "official_api": "Directions API"},
+    {"field": "language", "status": "unsupported", "notes": "Language not settable per-request; controlled by browser locale setting.", "official_api": "Directions API"},
+    {"field": "region", "status": "unsupported", "notes": "Region bias not implemented.", "official_api": "Directions API"},
+    {"field": "departure_time", "status": "unsupported", "notes": "Departure time not settable via Maps URL.", "official_api": "Directions API"},
+    {"field": "arrival_time", "status": "unsupported", "notes": "Arrival time not settable via Maps URL.", "official_api": "Directions API"},
+    {"field": "traffic_model", "status": "unsupported", "notes": "Traffic model not exposed in Maps web.", "official_api": "Directions API"},
+    {"field": "transit_mode", "status": "unsupported", "notes": "Transit sub-mode not settable via Maps URL.", "official_api": "Directions API"},
+    {"field": "transit_routing_preference", "status": "unsupported", "notes": "Transit routing preferences not settable via Maps URL.", "official_api": "Directions API"}
+  ]
+}

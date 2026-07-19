@@ -1,0 +1,10 @@
+{
+  "capture_date": "2026-07-14",
+  "locale": "unknown",
+  "region": "unknown",
+  "response_family": "maps-bootstrap-regression",
+  "original_body_sha256": null,
+  "sanitized_body_sha256": "23c148cc765da3bfe0ab8277327728a4461df72a2f0ef524cf6acb91c6c7c31a",
+  "public_seed": "Space Needle official place ID",
+  "sanitization": "Synthetic minimum reproducer derived from the observed output because the complete live bootstrap body was not retained."
+}

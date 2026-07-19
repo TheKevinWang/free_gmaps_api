@@ -1,0 +1,71 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "free-gmaps-api"
+dynamic = ["version"]
+description = "A local API adapter for evidence exposed by the Google Maps web application."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "httpx[socks]>=0.27",
+]
+
+[project.optional-dependencies]
+browser = [
+    "zendriver>=0.15.4,<0.16",
+]
+dev = [
+    "Pillow>=11.0",
+    "pytest>=8.2",
+    "pytest-asyncio>=0.23",
+    "pytest-timeout>=2.3",
+    "mypy>=1.10",
+    "ruff>=0.4",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/free_gmaps_api"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"contracts/google-api-subset/v1" = "free_gmaps_api/contracts/google-api-subset/v1"
+
+[tool.hatch.build.targets.sdist]
+exclude = [
+    "/.agent",
+    "/AGENTS.md",
+    "/docs/exec-plans",
+]
+
+[tool.hatch.version]
+path = "src/free_gmaps_api/__init__.py"
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+disallow_any_generics = true
+disallow_subclassing_any = true
+no_implicit_reexport = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "module"
+testpaths = ["tests"]
+markers = [
+    "live: requires network, Chrome, and Google Maps web",
+    "live_http: requires network, a proxy, and Google Maps web (without Chrome)",
+    "official: requires GOOGLE_MAPS_API_KEY and may bill the account",
+]

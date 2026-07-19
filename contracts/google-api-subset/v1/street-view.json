@@ -1,0 +1,13 @@
+{
+  "endpoint": "street-view",
+  "fields": [
+    {"field": "location", "status": "supported", "notes": "Address text or lat,lng coordinates. Address text is resolved via Maps search before opening Street View.", "official_api": "Street View Static API"},
+    {"field": "pano", "status": "partial", "notes": "Passed as a URL hint but not guaranteed to resolve to the exact panorama. Pano IDs are not durable.", "official_api": "Street View Static API"},
+    {"field": "heading", "status": "supported", "notes": "Passed to the Maps URL and parsed from the resolved canonical URL.", "official_api": "Street View Static API"},
+    {"field": "pitch", "status": "supported", "notes": "Passed to the Maps URL and parsed from the resolved canonical URL.", "official_api": "Street View Static API"},
+    {"field": "fov", "status": "supported", "notes": "Passed to the Maps URL and parsed from the resolved canonical URL.", "official_api": "Street View Static API"},
+    {"field": "size", "status": "partial", "notes": "Controls the clean web renderer dimensions when available. The result is not a first-party Static API response.", "official_api": "Street View Static API"},
+    {"field": "viewport", "status": "partial", "notes": "Controls browser viewport dimensions and is the clean renderer size fallback when size is absent.", "official_api": "Street View Static API"},
+    {"field": "unsupported_api_fields", "status": "not_applicable", "notes": "Internal field, not an official API field.", "official_api": null}
+  ]
+}

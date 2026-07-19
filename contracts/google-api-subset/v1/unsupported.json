@@ -1,0 +1,9 @@
+{
+  "endpoint": "unsupported",
+  "fields": [
+    {"field": "elevation.locations", "status": "not_applicable", "notes": "Elevation API not supported. Maps web does not expose numeric elevation.", "official_api": "Elevation API"},
+    {"field": "elevation.path", "status": "not_applicable", "notes": "Elevation API not supported.", "official_api": "Elevation API"},
+    {"field": "time_zone.location", "status": "not_applicable", "notes": "Time Zone API not supported. Maps web does not expose structured time zone data.", "official_api": "Time Zone API"},
+    {"field": "time_zone.timestamp", "status": "not_applicable", "notes": "Time Zone API not supported.", "official_api": "Time Zone API"}
+  ]
+}

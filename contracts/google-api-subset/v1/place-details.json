@@ -1,0 +1,11 @@
+{
+  "endpoint": "place-details",
+  "fields": [
+    {"field": "place_id", "status": "supported", "notes": "Used to build the Maps search URL.", "official_api": "Place Details"},
+    {"field": "maps_url", "status": "supported", "notes": "Direct Maps URL navigation.", "official_api": null},
+    {"field": "query", "status": "supported", "notes": "Used as a text search query.", "official_api": "Place Details"},
+    {"field": "fields", "status": "partial", "notes": "Only fields visible on the Maps place card are returned.", "official_api": "Place Details"},
+    {"field": "language", "status": "unsupported", "notes": "Language not settable per-request via Maps URL.", "official_api": "Place Details"},
+    {"field": "region", "status": "unsupported", "notes": "Region bias not settable via Maps URL.", "official_api": "Place Details"}
+  ]
+}

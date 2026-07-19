@@ -1,0 +1,14 @@
+{
+  "endpoint": "place-search",
+  "fields": [
+    {"field": "query", "status": "supported", "notes": "Searched in Maps web app.", "official_api": "Places Text Search"},
+    {"field": "fields", "status": "partial", "notes": "Treated as requested output fields. Only visible/fixture-backed fields are returned.", "official_api": "Places Text Search"},
+    {"field": "location_bias", "status": "unsupported", "notes": "Location bias not settable via Maps search URL.", "official_api": "Places Text Search"},
+    {"field": "location_restriction", "status": "unsupported", "notes": "Location restriction not settable via Maps search URL.", "official_api": "Places Text Search"},
+    {"field": "included_type", "status": "unsupported", "notes": "Type filter not settable via Maps search URL.", "official_api": "Places Text Search"},
+    {"field": "open_now", "status": "unsupported", "notes": "Open-now filter not settable via Maps search URL.", "official_api": "Places Text Search"},
+    {"field": "price_levels", "status": "unsupported", "notes": "Price filter not settable via Maps search URL.", "official_api": "Places Text Search"},
+    {"field": "language", "status": "unsupported", "notes": "Language not settable per-request.", "official_api": "Places Text Search"},
+    {"field": "region", "status": "unsupported", "notes": "Region bias not implemented.", "official_api": "Places Text Search"}
+  ]
+}

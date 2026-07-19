@@ -1,0 +1,16 @@
+[
+  "Space Needle, 400 Broad St, Seattle, WA 98109",
+  "Pike Place Market, Seattle, WA",
+  [
+    [
+      "Space Needle, Seattle, WA",
+      "Pike Place Market, Seattle, WA",
+      ["12 min", "1.2 miles", "via 2nd Ave", "Fastest route now"]
+    ],
+    [
+      "Space Needle, Seattle, WA",
+      "Pike Place Market, Seattle, WA",
+      ["14 min", "1.4 miles", "via 1st Ave", "Usual traffic"]
+    ]
+  ]
+]

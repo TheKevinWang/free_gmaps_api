@@ -1,0 +1,9 @@
+{
+  "capture_date": "2026-07-14",
+  "locale": "en-US",
+  "region": "US",
+  "response_family": "visible-primary-place-card",
+  "original_body_sha256": "7629294fa0044141969e3a1257cb085a106d4bd4f3501993f9e2916bac3b57ca",
+  "public_seed": "Space Needle Seattle WA",
+  "sanitization": "Retained primary identity and child-rating boundary; removed unrelated UI and business details."
+}

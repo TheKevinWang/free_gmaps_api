@@ -1,0 +1,13 @@
+{
+  "endpoint": "geocode",
+  "fields": [
+    {"field": "address", "status": "supported", "notes": "Searched in Maps web app.", "official_api": "Geocoding API"},
+    {"field": "place_id", "status": "partial", "notes": "Used as a search hint; resolved through Maps search flow.", "official_api": "Geocoding API"},
+    {"field": "bounds", "status": "unsupported", "notes": "Not implemented. Maps web search does not accept viewport bounds as a URL parameter.", "official_api": "Geocoding API"},
+    {"field": "region", "status": "unsupported", "notes": "Not implemented. Region bias not applied in browser URL.", "official_api": "Geocoding API"},
+    {"field": "language", "status": "unsupported", "notes": "Not implemented. Browser locale is set globally, not per-request.", "official_api": "Geocoding API"},
+    {"field": "components", "status": "unsupported", "notes": "Not implemented. Component filtering has no Maps URL equivalent.", "official_api": "Geocoding API"},
+    {"field": "result_type", "status": "unsupported", "notes": "Not implemented. Result type filtering not available through Maps web.", "official_api": "Geocoding API"},
+    {"field": "location_type", "status": "unsupported", "notes": "Not implemented. Location type filtering not available through Maps web.", "official_api": "Geocoding API"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "endpoint": "distance-matrix",
+  "fields": [
+    {"field": "origins", "status": "supported", "notes": "Each origin is used in a separate directions lookup.", "official_api": "Distance Matrix API"},
+    {"field": "destinations", "status": "supported", "notes": "Each destination is used in a separate directions lookup.", "official_api": "Distance Matrix API"},
+    {"field": "travel_mode", "status": "supported", "notes": "Passed to directions lookups.", "official_api": "Distance Matrix API"},
+    {"field": "avoid", "status": "partial", "notes": "Supported avoid values passed to directions lookups.", "official_api": "Distance Matrix API"},
+    {"field": "units", "status": "unsupported", "notes": "Unit system not controllable per-request.", "official_api": "Distance Matrix API"},
+    {"field": "language", "status": "unsupported", "notes": "Language not settable per-request.", "official_api": "Distance Matrix API"},
+    {"field": "region", "status": "unsupported", "notes": "Region bias not implemented.", "official_api": "Distance Matrix API"},
+    {"field": "departure_time", "status": "unsupported", "notes": "Departure time not settable via Maps URL.", "official_api": "Distance Matrix API"},
+    {"field": "arrival_time", "status": "unsupported", "notes": "Arrival time not settable via Maps URL.", "official_api": "Distance Matrix API"},
+    {"field": "traffic_model", "status": "unsupported", "notes": "Traffic model not exposed in Maps web.", "official_api": "Distance Matrix API"},
+    {"field": "transit_mode", "status": "unsupported", "notes": "Transit sub-mode not settable via Maps URL.", "official_api": "Distance Matrix API"},
+    {"field": "transit_routing_preference", "status": "unsupported", "notes": "Transit routing preferences not settable.", "official_api": "Distance Matrix API"}
+  ]
+}

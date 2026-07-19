@@ -1,0 +1,10 @@
+{
+  "endpoint": "map-view",
+  "fields": [
+    {"field": "center", "status": "supported", "notes": "Mapped to Maps URL center parameter.", "official_api": "Maps JavaScript API"},
+    {"field": "zoom", "status": "supported", "notes": "Mapped to Maps URL zoom parameter.", "official_api": "Maps JavaScript API"},
+    {"field": "basemap", "status": "supported", "notes": "Supported: roadmap, satellite, terrain.", "official_api": "Maps JavaScript API"},
+    {"field": "layer", "status": "supported", "notes": "At most one layer: traffic, transit, or bicycling.", "official_api": "Maps JavaScript API"},
+    {"field": "viewport", "status": "partial", "notes": "Controls browser viewport dimensions for screenshot.", "official_api": "Maps JavaScript API"}
+  ]
+}

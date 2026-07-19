@@ -1,0 +1,9 @@
+{
+  "capture_date": "2026-07-14",
+  "locale": "en-US",
+  "region": "US",
+  "response_family": "maps-preview-directions",
+  "original_body_sha256": "768ee6fef085dae78796e4c2241f5735a63c958037afee7fefa456c052d7352c",
+  "public_seed": "Space Needle Seattle WA to Pike Place Market Seattle WA",
+  "sanitization": "Retained public resolved endpoints and two route labels; removed opaque tokens, geometry, telemetry, and unrelated records."
+}

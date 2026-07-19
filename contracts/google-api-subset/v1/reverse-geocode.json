@@ -1,0 +1,10 @@
+{
+  "endpoint": "reverse-geocode",
+  "fields": [
+    {"field": "latlng", "status": "supported", "notes": "Coordinates navigated to directly in Maps.", "official_api": "Geocoding API (reverse)"},
+    {"field": "result_type", "status": "unsupported", "notes": "Result type filtering not available via Maps web navigation.", "official_api": "Geocoding API (reverse)"},
+    {"field": "location_type", "status": "unsupported", "notes": "Location type filtering not available via Maps web navigation.", "official_api": "Geocoding API (reverse)"},
+    {"field": "language", "status": "unsupported", "notes": "Language not settable per-request via Maps URL.", "official_api": "Geocoding API (reverse)"},
+    {"field": "region", "status": "unsupported", "notes": "Region bias not settable via Maps URL.", "official_api": "Geocoding API (reverse)"}
+  ]
+}
