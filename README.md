@@ -21,13 +21,13 @@ before using or redistributing it.
 | Distance matrix | Repeats directions lookups for several origin/destination pairs. | Limited to 25 elements and unsuitable for high-volume work. |
 | Elevation and time zone | Returns an explicit `not_supported` response. | The website does not expose a stable substitute. |
 
-## Quick start for Windows
+## Quick start
 
 ### 1. Install the prerequisites
 
 You need:
 
-- Windows with Python 3.12 or newer.
+- Windows, Linux, or macOS with Python 3.12 or newer.
 - `uv` for creating the Python environment and installing the project.
 - A working HTTP or SOCKS5 proxy.
 
@@ -41,7 +41,7 @@ browser-rendered evidence.
 
 ### 2. Install the service
 
-Run these commands from the repository directory in PowerShell:
+On Windows, run these commands from the repository directory in PowerShell:
 
     uv venv --seed .venv
     uv pip install --python .\.venv\Scripts\python.exe -e .
@@ -53,16 +53,35 @@ PowerShell window:
 
 Replace that example with your real proxy scheme, host, and port.
 
+On Linux or macOS, run the equivalent commands from the repository directory
+in a terminal:
+
+    uv venv --seed .venv
+    uv pip install --python .venv/bin/python -e .
+
+If your proxy is not running at the default address, set it for the current
+shell:
+
+    export GMAPS_PROXY_URL="socks5://127.0.0.1:9050"
+
+Replace that example with your real proxy scheme, host, and port.
+
 ### 3. Start the service
 
+On Windows PowerShell:
+
     .\.venv\Scripts\python.exe -m uvicorn free_gmaps_api.app:create_app --factory --host 127.0.0.1 --port 8787
+
+On Linux or macOS:
+
+    .venv/bin/python -m uvicorn free_gmaps_api.app:create_app --factory --host 127.0.0.1 --port 8787
 
 Keep that window open. The service is available only on your computer at
 `http://127.0.0.1:8787` unless you deliberately bind it elsewhere.
 
 ### 4. Confirm that it is running
 
-Open a second PowerShell window and run:
+On Windows, open a second PowerShell window and run:
 
     Invoke-RestMethod http://127.0.0.1:8787/health
 
@@ -72,13 +91,21 @@ A healthy response looks like this:
     --      ------- -------
     True    0.1.0   http
 
+On Linux or macOS, open a second terminal and run:
+
+    curl -sS http://127.0.0.1:8787/health
+
+A healthy response is returned as JSON:
+
+    {"ok":true,"version":"0.1.0","backend":"http"}
+
 ### 5. Try a request
 
 The easiest interface is the interactive documentation at
 [http://127.0.0.1:8787/docs](http://127.0.0.1:8787/docs). Open an endpoint,
 select **Try it out**, enter its JSON request, and select **Execute**.
 
-This PowerShell example requests coordinates for the Space Needle:
+On Windows PowerShell, this example requests coordinates for the Space Needle:
 
     $body = @{ address = "Space Needle Seattle WA" } | ConvertTo-Json
 
@@ -87,6 +114,13 @@ This PowerShell example requests coordinates for the Space Needle:
       -Method Post `
       -ContentType "application/json" `
       -Body $body
+
+On Linux or macOS, use `curl`:
+
+    curl -sS http://127.0.0.1:8787/v1/geocode \
+      -X POST \
+      -H 'Content-Type: application/json' \
+      -d '{"address":"Space Needle Seattle WA"}'
 
 Press `Ctrl+C` in the server window when you want to stop it.
 
